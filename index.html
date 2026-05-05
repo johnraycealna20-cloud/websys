@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <h1>product listing</h1>
+    <div id="productList"></div>
+
+    <h2>Cart</h2>
+    <div id="cart"></div>
+
+    <p>Total: <span id="cartTotal">0</span> PHP</p>
+    <script src="data.js"></script>
+    <script src="logic.js"></script>
+    <script>
+      const output = document.getElementById("productList");
+      for (const key in products) {
+        const item = products[key];
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <h2>${key}</h2>
+          <p>Brand: ${item.brand}</p>
+          <p>Model: ${item.model}</p>
+          <p>Price: ${item.price} ${item.currency}</p>
+        `;
+        output.appendChild(div);
+      }
+    </script>
+    
+</body>
+</html>
