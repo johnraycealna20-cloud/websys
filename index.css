@@ -1,14 +1,36 @@
-
+h1{
+  color: rgb(175, 174, 172);
+  border-style: solid;
+  text-align: center;
+  border-color: #101feb;
+}
+body{
+  background-color: rgba(245, 245, 220, 0.692);
+}
 #productList {
-  display: grid;
-  grid-row:;
-  
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+
 }
 #productList > div {
   border: none;
   padding: 10px;
   width: 200px;
- color: blue;
+  height: 200px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border-color: #000000;
+  border-style: outset;
+  
+  
 }
 #productList > div h2 {
   margin: 0;
@@ -29,7 +51,7 @@
 }
 
 #cart {
-  border: 1px solid #ddd;
+  border: 1px solid #8f2929;
   padding: 10px;
   margin-top: 20px;
 }
@@ -39,12 +61,47 @@
   align-items: center;
   margin-bottom: 10px;
 }
+#productList > div button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+#productList > div button:disabled:hover {
+  background-color: #ccc;
+}
+
 #cart button {
   background-color: #dc3545;
   color: white;
   border: none;
   padding: 5px;
   cursor: pointer;
+  margin: 0 2px;
+}
+.increase, .decrease {
+  width: 20px;
+}
+.remove {
+  margin-left: 10px;
+}
+
+#clearCart {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#clearCart:hover {
+  background-color: #c82333;
+}
+
+#cartBadge {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 10px;
+  font-size: 0.8em;
 }
 #cart button:hover {
   background-color: #c82333;

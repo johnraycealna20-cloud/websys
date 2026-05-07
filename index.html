@@ -8,29 +8,16 @@
     
 </head>
 <body>
-    <h1>product listing</h1>
+    <h1>SHOPPENIRAY</h1>
     <div id="productList"></div>
 
-    <h2>Cart</h2>
+    <h2>Cart <span id="cartBadge"></span></h2>
     <div id="cart"></div>
 
-    <p>Total: <span id="cartTotal">0</span> PHP</p>
-    <script src="data.js"></script>
+    <p>Cart Total: <span id="cartTotal">0</span> PHP</p>
+    <button id="clearCart">Clear Cart</button>
+     <script src="data.js"></script>
     <script src="logic.js"></script>
-    <script>
-      const output = document.getElementById("productList");
-      for (const key in products) {
-        const item = products[key];
-        const div = document.createElement("div");
-        div.innerHTML = `
-          <h2>${key}</h2>
-          <p>Brand: ${item.brand}</p>
-          <p>Model: ${item.model}</p>
-          <p>Price: ${item.price} ${item.currency}</p>
-        `;
-        output.appendChild(div);
-      }
-    </script>
     
 </body>
 </html>
